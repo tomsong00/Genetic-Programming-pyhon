@@ -12,7 +12,6 @@ class Operator(object):
         idx2=np.random.randint(0,pop_size)
         while idx1 == idx2:
             idx2 = np.random.randint(0, pop_size)
-        #后面考虑解决
         #idx1=np.random.choice(pop_size,size=1,p=fitness)
         individual1 = population[idx1]
         individual2 = population[idx2]
