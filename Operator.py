@@ -58,8 +58,8 @@ class Operator(object):
                 # 需要查找已经使用过的，随机替换一个
                 max_length = len(TERMINALS) + len(FUNCTIONS)
                 is_used = np.zeros(max_length, dtype='int64')
-                for i in range(np.shape(individual)[0]):
-                    id = individual[i, 0] - 1
+                for j in range(np.shape(individual)[0]):
+                    id = individual[j, 0] - 1
                     is_used[id] = 1
                 function_used = is_used[0:(len(FUNCTIONS))]
                 terminal_used = is_used[len(FUNCTIONS):max_length]
